@@ -1,0 +1,32 @@
+package com.rg.opps;
+
+public class BankAccount {
+	private long accNum;
+	private String accName;
+	private double balance;
+	 
+	void setAccNum(long accNum) {
+		this.accNum=accNum;
+	}
+	
+	long getAccNum() {
+		return accNum;
+	}
+	
+	void setAccName(String accName) {
+		this.accName=accName;
+	
+	}
+	String getAccName() {
+		return accName;
+	}
+	
+	void setBalance(double balance)throws IndexOutOfBoundException{
+		if(Balance<=0)
+			throw new IndexOutOfBoundException("Do not pass either negative number or zero as balance");
+		this.balance=balance;
+	}
+	double getBalance() {
+		return balance;
+	}
+}
